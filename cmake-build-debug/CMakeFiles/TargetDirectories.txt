@@ -1,0 +1,9 @@
+C:/Users/dylan/MyRepos/ZorkWithQT/cmake-build-debug/CMakeFiles/QTZork.dir
+C:/Users/dylan/MyRepos/ZorkWithQT/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/dylan/MyRepos/ZorkWithQT/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/dylan/MyRepos/ZorkWithQT/cmake-build-debug/CMakeFiles/list_install_components.dir
+C:/Users/dylan/MyRepos/ZorkWithQT/cmake-build-debug/CMakeFiles/install.dir
+C:/Users/dylan/MyRepos/ZorkWithQT/cmake-build-debug/CMakeFiles/install/local.dir
+C:/Users/dylan/MyRepos/ZorkWithQT/cmake-build-debug/CMakeFiles/install/strip.dir
+C:/Users/dylan/MyRepos/ZorkWithQT/cmake-build-debug/CMakeFiles/QTZork_autogen_timestamp_deps.dir
+C:/Users/dylan/MyRepos/ZorkWithQT/cmake-build-debug/CMakeFiles/QTZork_autogen.dir

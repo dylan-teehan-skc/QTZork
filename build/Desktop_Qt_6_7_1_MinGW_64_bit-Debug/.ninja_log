@@ -1,0 +1,21 @@
+# ninja log v5
+22	5057	7382813897632642	CMakeFiles/QTZork.dir/room.cpp.obj	ea6f9d0e301427e2
+9	892	7382824185720972	build.ninja	c87d03f202a82185
+46	4710	7382813892989679	CMakeFiles/QTZork.dir/character.cpp.obj	c620038ba4d426f9
+90	4701	7382813888999001	CMakeFiles/QTZork.dir/commandwords.cpp.obj	c4a9c82ee219b5a5
+8	4707	7382813889380289	CMakeFiles/QTZork.dir/processcommand.cpp.obj	835d4350e78c4b38
+68	5059	7382813899050928	CMakeFiles/QTZork.dir/command.cpp.obj	a550f9a84d02680d
+29	5062	7382813899110778	CMakeFiles/QTZork.dir/item.cpp.obj	489717b7ed19b6cf
+15	5060	7382813898834279	CMakeFiles/QTZork.dir/parser.cpp.obj	dac1caf7a575746f
+2	13344	7382813984862715	CMakeFiles/QTZork.dir/zorkUl.cpp.obj	3e7a584bf206efd0
+27	1283	7382817355887088	CMakeFiles/QTZork.dir/enemy.cpp.obj	e5e9394721a24039
+34	1718	7382817360169405	CMakeFiles/QTZork.dir/player.cpp.obj	3dba9f17856b3bee
+10	866	7382824185720972	build.ninja	c87d03f202a82185
+6	4278	7382824494040563	CMakeFiles/QTZork.dir/main.cpp.obj	30ca54eb660b5382
+9	3980	7382826063653955	CMakeFiles/QTZork.dir/main.cpp.obj	30ca54eb660b5382
+13	4447	7382827251057806	CMakeFiles/QTZork.dir/main.cpp.obj	30ca54eb660b5382
+22	4540	7382827251960689	CMakeFiles/QTZork.dir/mainwindow.cpp.obj	b7d2d222caa415f7
+14	4075	7382827429189574	CMakeFiles/QTZork.dir/main.cpp.obj	30ca54eb660b5382
+15	4262	7382828778230424	CMakeFiles/QTZork.dir/main.cpp.obj	30ca54eb660b5382
+24	4379	7382828779404328	CMakeFiles/QTZork.dir/mainwindow.cpp.obj	b7d2d222caa415f7
+9	3361	7382830744412177	CMakeFiles/QTZork.dir/mainwindow.cpp.obj	b7d2d222caa415f7

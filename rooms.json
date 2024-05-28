@@ -1,0 +1,64 @@
+{
+  "rooms": [
+    {
+      "name": "Salty Springs",
+      "description": "You now enter Salty Springs, a small, desolate town with overgrown vegetation and abandoned buildings. The air is thick with the scent of salt and decay.",
+      "items": [
+        { "name": "bandages", "hasDamage": false },
+        { "name": "key", "hasDamage": false }
+      ],
+      "exitN": ["Retail Row"],
+      "exitE": [],
+      "exitS": [],
+      "exitW": ["Dusty Divot"]
+    },
+    {
+      "name": "Retail Row",
+      "description": "You enter Retail Row, a once-bustling shopping district now in ruins. Shattered glass litters the ground, and the remnants of storefronts line the street.",
+      "items": [
+        { "name": "scar", "hasDamage": true, "damage": 30},
+        { "name": "medkit", "hasDamage": false }
+      ],
+      "exitN": ["Salty Springs"],
+      "exitE": ["Lonely Lodge"],
+      "exitS": ["Dusty Divot"],
+      "exitW": []
+    },
+    {
+      "name": "Dusty Divot",
+      "description": "Dusty Divot, a large crater in the ground filled with strange, glowing rocks and remnants of an alien spacecraft. The air hums with an otherworldly energy.",
+      "items": [
+        { "name": "map", "hasDamage": false},
+        { "name": "shield","hasDamage": false}
+      ],
+      "exitN": ["Retail Row"],
+      "exitE": ["Salty Springs"],
+      "exitS": ["Haunted Hills"],
+      "exitW": []
+    },
+    {
+      "name": "Lonely Lodge",
+      "description": "Lonely Lodge, a secluded area surrounded by dense forest. The sound of wildlife is all around, but there is an eerie feeling of being watched.",
+      "items": [
+        { "name": "bow and arrow", "hasDamage": true, "damage": 30},
+        { "name": "food", "hasDamage": false }
+      ],
+      "exitN": [],
+      "exitE": [],
+      "exitS": ["Retail Row"],
+      "exitW": []
+    },
+    {
+      "name": "Haunted Hills",
+      "description": "Haunted Hills, a graveyard shrouded in mist and filled with ancient tombstones. Whispers of the past seem to float through the air, sending chills down your spine.",
+      "items": [
+        { "name": "ghost lantern", "hasDamage": false},
+        { "name": "old map","hasDamage": false}
+      ],
+      "exitN": ["Dusty Divot"],
+      "exitE": [],
+      "exitS": [],
+      "exitW": []
+    }
+  ]
+}
