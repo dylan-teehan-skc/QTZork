@@ -14,8 +14,6 @@ private:
 public:
     // Static method to get the instance of the player (singleton pattern)
     static Player *getInstance(string description = "Player", int health = 100);
-
-    // Getter and setter for health
     int getHealth() const;
     void setHealth(int health);
     virtual

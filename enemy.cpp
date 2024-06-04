@@ -17,7 +17,7 @@ void Enemy::attack(Player& player) { // Pass player by reference
     player.setHealth(player.getHealth() - damageInflicted);
     cout << "The enemy attacks you for " << damageInflicted << " damage!" << endl;
     std::stringstream attackString;
-    attackString << "The enemy attacks you for " << damageInflicted;
+    attackString << "The enemy attacks you for " << damageInflicted << " damage, your health is now " << player.getHealth();
     MainWindow::getInstance()->append(QString::fromStdString(attackString.str()));
 }
 

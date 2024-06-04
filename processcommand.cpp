@@ -3,7 +3,6 @@
 #include "processCommand.h"
 #include "Player.h"
 #include "mainwindow.h"
-#include "enemy.h"
 
 Player *player = Player::getInstance();
 
@@ -60,8 +59,11 @@ bool ProcessCommand::processCommand(Command command) {
             const vector<Item> &playerItems = player->getItemsInCharacter();
             for (const Item &item: playerItems) {
                 if (item.getName() == itemName) {
-                    // Equip the item
-                    if (itemName != "Basic-Sword") {
+                    if (itemName == "Crown"){
+                        MainWindow::getInstance()->append("Victory is yours! You have triumphed over all challenges and emerged victorious.");
+                        return true;
+                    }
+                    else if (itemName != "Basic-Sword") {
                         player->equipWeapon(item);
                         QString equippedString = QString::fromStdString("You have equipped " + itemName);
                         MainWindow::getInstance()->append(equippedString);
@@ -79,7 +81,7 @@ bool ProcessCommand::processCommand(Command command) {
     } else if (commandWord.compare("health") == 0) {
         cout << player->getHealth() << endl;
         std::stringstream healthString;
-        healthString << "Your health is" << player->getHealth();
+        healthString << "Your health is " << player->getHealth();
         MainWindow::getInstance()->append(QString::fromStdString(healthString.str()));
         cout << "Your health is " << player->getHealth() << endl;
     } else if (commandWord.compare("use") == 0) {
@@ -94,9 +96,9 @@ bool ProcessCommand::processCommand(Command command) {
                 game->getCurrentRoom()->addItem(new Item("Shotgun", "True", 30));
             } else if (itemName == "Bandages" && player->hasItem(itemName)) {
                 player->setHealth(player->getHealth() + 50);
-                QString healthUpdateString = QString::fromStdString(
-                        "Your health is has been updated to" + player->getHealth());
-                MainWindow::getInstance()->append(healthUpdateString);
+                std::stringstream updateHealthString;
+                updateHealthString << "Your health has been updated to " << player->getHealth();
+                MainWindow::getInstance()->append(QString::fromStdString(updateHealthString.str()));
                 cout << "Your health has been updated to " << player->getHealth() << endl;
             } else if (player->hasItem(itemName)) {
                 MainWindow::getInstance()->append("You cannot use this item");
@@ -125,7 +127,7 @@ bool ProcessCommand::processCommand(Command command) {
     } else if (commandWord.compare("battle") == 0) {
         game->initiateBattle();
     } else if (commandWord.compare("attack") == 0 || commandWord.compare("block") == 0) {
-        game->processBattleCommand(command);
+        game->processBattleCommand(command, game);
     }
     return false;
 }
@@ -138,8 +140,6 @@ void ZorkUL::goRoom(Command command) {
     }
 
     string direction = command.getSecondWord();
-
-    // Try to leave current room.
     Room *nextRoom = currentRoom->nextRoom(direction);
 
     if (nextRoom == NULL) {

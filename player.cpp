@@ -9,7 +9,6 @@
 
 using namespace std;
 
-// Initialize the singleton instance to nullptr
 Player* Player::instance = nullptr;
 
 // Singleton getInstance method
@@ -39,11 +38,11 @@ void Player::attack(Enemy& enemy) {
     Player *player = Player::getInstance();
     Item equippedWeapon = player->getEquippedWeapon();
     if (equippedWeapon.getDamage() > 0) {
+        enemy.setHealth(enemy.getHealth() - equippedWeapon.getDamage());
         std::stringstream playerAttackString;
         playerAttackString << "Player attacks " << enemy.getDescription() << " with " << equippedWeapon.getName() << " causing "
-                           << equippedWeapon.getDamage() << " damage.";
+                           << equippedWeapon.getDamage() << " damage, enemies health is now " << enemy.getHealth();
         MainWindow::getInstance()->append(QString::fromStdString(playerAttackString.str()));
-        enemy.setHealth(enemy.getHealth() - equippedWeapon.getDamage());
     } else {
         cout << "You can't attack with this weapon, please equip another." << endl;
     }

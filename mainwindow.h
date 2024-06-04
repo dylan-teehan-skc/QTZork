@@ -20,6 +20,7 @@ public:
     ~MainWindow();
     void append(const QString &text);
 
+
 private:
     explicit MainWindow(QWidget *parent = nullptr);
     MainWindow(const MainWindow&) = delete;

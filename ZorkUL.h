@@ -23,24 +23,20 @@ private:
     ProcessCommand processor = ProcessCommand(nullptr);
     Enemy* enemy;
 
+
 public:
     ZorkUL();
     void play();
     Room* getCurrentRoom();
     void printHelp();
     bool update(string buffer);
-
     void goRoom(Command command);
-
     void checkForBattle();
-
     void battle(Enemy &enemy);
-
     void goRoom(Command command, ZorkUL *gamePtr);
-
     void initiateBattle();
-
-    void processBattleCommand(Command command);
+    void processBattleCommand(Command command, ZorkUL &game);
+    void processBattleCommand(Command command, ZorkUL *gamePtr);
 };
 
 #endif /*ZORKUL_H_*/
