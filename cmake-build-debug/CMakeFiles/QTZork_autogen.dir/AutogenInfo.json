@@ -284,6 +284,12 @@
 			null
 		],
 		[
+			"C:/Users/dylan/MyRepos/ZorkWithQT/hostile.h",
+			"MU",
+			"EWIEGA46WW/moc_hostile.cpp",
+			null
+		],
+		[
 			"C:/Users/dylan/MyRepos/ZorkWithQT/item.h",
 			"MU",
 			"EWIEGA46WW/moc_item.cpp",
@@ -402,6 +408,7 @@
 		[ "C:/Users/dylan/MyRepos/ZorkWithQT/command.cpp", "MU", null ],
 		[ "C:/Users/dylan/MyRepos/ZorkWithQT/commandwords.cpp", "MU", null ],
 		[ "C:/Users/dylan/MyRepos/ZorkWithQT/enemy.cpp", "MU", null ],
+		[ "C:/Users/dylan/MyRepos/ZorkWithQT/hostile.cpp", "MU", null ],
 		[ "C:/Users/dylan/MyRepos/ZorkWithQT/item.cpp", "MU", null ],
 		[ "C:/Users/dylan/MyRepos/ZorkWithQT/main.cpp", "MU", null ],
 		[ "C:/Users/dylan/MyRepos/ZorkWithQT/mainwindow.cpp", "MU", null ],

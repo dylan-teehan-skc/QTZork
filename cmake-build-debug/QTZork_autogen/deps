@@ -563,6 +563,8 @@ QTZork_autogen/timestamp: \
 	C:/Users/dylan/MyRepos/ZorkWithQT/commandwords.h \
 	C:/Users/dylan/MyRepos/ZorkWithQT/enemy.cpp \
 	C:/Users/dylan/MyRepos/ZorkWithQT/enemy.h \
+	C:/Users/dylan/MyRepos/ZorkWithQT/hostile.cpp \
+	C:/Users/dylan/MyRepos/ZorkWithQT/hostile.h \
 	C:/Users/dylan/MyRepos/ZorkWithQT/item.cpp \
 	C:/Users/dylan/MyRepos/ZorkWithQT/item.h \
 	C:/Users/dylan/MyRepos/ZorkWithQT/json.hpp \

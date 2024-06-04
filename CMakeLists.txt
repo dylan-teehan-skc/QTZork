@@ -38,6 +38,8 @@ set(PROJECT_SOURCES
         Enemy.cpp
         mainwindow.cpp
         mainwindow.h
+        hostile.cpp
+        hostile.h
 )
 
 # If using Qt6, use qt_add_executable

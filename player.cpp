@@ -11,6 +11,13 @@ using namespace std;
 
 Player* Player::instance = nullptr;
 
+struct PlayerFlags {
+    unsigned int isAlive : 1;
+    unsigned int isDefending : 1;
+    unsigned int isAttacking : 1;
+    unsigned int isMoving : 1;
+};
+
 // Singleton getInstance method
 Player* Player::getInstance(string description, int health) {
     if (instance == nullptr) {
@@ -21,7 +28,12 @@ Player* Player::getInstance(string description, int health) {
 
 // Constructor definition
 Player::Player(string description, int health)
-: Character(description, health), health(health) {}
+: Character(description, health), health(health) {
+    make_unique<PlayerFlags>()->isAlive=1;
+    make_unique<PlayerFlags>()->isDefending=0;
+    make_unique<PlayerFlags>()->isAttacking=0;
+    make_unique<PlayerFlags>()->isMoving=0;
+}
 
 // Getter for health
 int Player::getHealth() const {
@@ -33,7 +45,6 @@ void Player::setHealth(int health) {
     this->health = min(max(health, 0), 100);
 }
 
-// Specific attack method for attacking an Enemy
 void Player::attack(Enemy& enemy) {
     Player *player = Player::getInstance();
     Item equippedWeapon = player->getEquippedWeapon();

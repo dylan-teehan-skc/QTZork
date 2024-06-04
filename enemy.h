@@ -1,17 +1,18 @@
 #ifndef ENEMY_H
 #define ENEMY_H
-#include "Player.h"
-#include "Character.h" // Include necessary headers
 
-// Enemy class declaration
-class Enemy : public Character {
+#include "Character.h"
+#include "Hostile.h"
+#include "Player.h"
+
+class Enemy : public Character, public Hostile {
 private:
     int damage;
 
 public:
-    Enemy(string description, int health, int damage);
-    virtual
-    void attack(Player &player);
+    Enemy(std::string description, int health, int damage);
+    void attack(Player& player);
+    void intimidate(Player& player) override;
 };
 
 #endif // ENEMY_H

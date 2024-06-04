@@ -385,6 +385,7 @@ C:/Users/dylan/MyRepos/ZorkWithQT/cmake-build-debug/QTZork_autogen/EWIEGA46WW/mo
   C:/Users/dylan/MyRepos/ZorkWithQT/Character.h \
   C:/Users/dylan/MyRepos/ZorkWithQT/Command.h \
   C:/Users/dylan/MyRepos/ZorkWithQT/CommandWords.h \
+  C:/Users/dylan/MyRepos/ZorkWithQT/Hostile.h \
   C:/Users/dylan/MyRepos/ZorkWithQT/Item.h \
   C:/Users/dylan/MyRepos/ZorkWithQT/Parser.h \
   C:/Users/dylan/MyRepos/ZorkWithQT/Player.h \

@@ -21,4 +21,8 @@ void Enemy::attack(Player& player) { // Pass player by reference
     MainWindow::getInstance()->append(QString::fromStdString(attackString.str()));
 }
 
-
+void Enemy::intimidate(Player& player) {
+    std::stringstream intimidateString;
+    intimidateString << "The enemy laughs at you instead! Your health is " << player.getHealth();
+    MainWindow::getInstance()->append(QString::fromStdString(intimidateString.str()));
+}

@@ -8,12 +8,22 @@
 using json = nlohmann::json;
 using namespace std;
 
+class FileOpenException : public exception {
+private:
+    std::string message;
+
+public:
+    FileOpenException(const std::string& msg) : message(msg) {}
+    const char* what() const noexcept override {
+        return message.c_str();
+    }
+};
+
 void ZorkUL::createRooms() {
 
     ifstream ifs("C:/Users/dylan/MyRepos/ZorkWithQt/rooms.json");
     if (!ifs.is_open()) {
-        cerr << "Error opening file rooms.json" << endl;
-        return;
+        throw FileOpenException("file could not be opened");
     }
 
     json roomsData;
@@ -122,8 +132,6 @@ bool ZorkUL::update(string buffer) {
 }
 
 void ZorkUL::printWelcome() {
-    cout << "start"<< endl;
-    cout << "info for help"<< endl;
     cout << endl;
     cout << currentRoom->longDescription() << endl;
 
@@ -164,6 +172,7 @@ void ZorkUL::processBattleCommand(Command command, ZorkUL *gamePtr) {
         // Block logic: player takes no damage this turn
         QString blockString = "You block the enemy's attack!";
         MainWindow::getInstance()->append(blockString);
+        enemy->intimidate(*player);
     } else {
         MainWindow::getInstance()->append("Invalid command during battle!");
         cout << "Invalid command during battle!" << endl;
@@ -185,3 +194,6 @@ void ZorkUL::processBattleCommand(Command command, ZorkUL *gamePtr) {
         enemy = nullptr;
     }
 }
+
+
+

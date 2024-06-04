@@ -33,6 +33,7 @@ MainWindow::MainWindow(QWidget *parent) :
     Room* currentRoom = zorkUl->getCurrentRoom();
     QString Description = QString::fromStdString(currentRoom->longDescription());
     append("Welcome to Zork");
+    append("Embark on a quest through mysterious rooms, each holding unique treasures. Collect valuable items like swords and maps to aid your journey. Defeat enemies strategically to uncover the path to victory. Navigate wisely through the interconnected rooms to win!!");
     append("Type info for help!");
     append(Description);
     zorkUl->play();

@@ -3,6 +3,8 @@
 
 #include "Character.h"
 #include <string>
+#include <memory>
+
 class Enemy;
 
 class Player : public Character {

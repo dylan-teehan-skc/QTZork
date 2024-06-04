@@ -5,10 +5,6 @@ Character::Character(string description, int health) {
     this->health = health;
 }
 
-string Character::shortDescription() {
-    return description;
-}
-
 void Character::addItem(const Item &item) {
     itemsInCharacter.push_back(item);
 }

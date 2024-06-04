@@ -9,7 +9,7 @@
         { "name": "Key", "hasDamage": false }
       ],
       "exitN": ["Retail Row"],
-      "exitE": [],
+      "exitE": ["Pleasant Park"],
       "exitS": [],
       "exitW": ["Dusty Divot"]
     },

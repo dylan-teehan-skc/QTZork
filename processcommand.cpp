@@ -19,15 +19,19 @@ bool ProcessCommand::processCommand(Command command) {
     string commandWord = command.getCommandWord();
     if (commandWord.compare("info") == 0) {
         game->printHelp();
-    } else if (commandWord.compare("map") == 0) {
-        cout << "[h] --- [f] --- [g]" << endl;
-        cout << "         |         " << endl;
-        cout << "         |         " << endl;
-        cout << "[c] --- [a] --- [b]" << endl;
-        cout << "         |         " << endl;
-        cout << "         |         " << endl;
-        cout << "[i] --- [d] --- [e]" << endl;
-    } else if (commandWord.compare("go") == 0)
+    } else if (commandWord.compare("Map") == 0) {
+        std::stringstream mapString;
+
+        mapString << "        [Retail Row] --- [Lonely Lodge] --- [Haunted Hills]" << endl;
+        mapString << "                  |                          |                " << endl;
+        mapString << "                  |                          |                " << endl;
+        mapString << "[Dusty Divot] --- [Salty Springs] --- [Pleasant Park] --- [Tilted Towers]" << endl;
+        mapString << "                  |                          |                " << endl;
+        mapString << "                  |                          |                " << endl;
+        mapString << "          [Haunted Hills] --- [Wailing Woods] --- [Loot Lake]" << endl;
+        MainWindow::getInstance()->append(QString::fromStdString(mapString.str()));
+    }
+    else if (commandWord.compare("go") == 0)
         game->goRoom(command);
 
     else if (commandWord.compare("pickup") == 0) {
@@ -61,7 +65,6 @@ bool ProcessCommand::processCommand(Command command) {
                 if (item.getName() == itemName) {
                     if (itemName == "Crown"){
                         MainWindow::getInstance()->append("Victory is yours! You have triumphed over all challenges and emerged victorious.");
-                        return true;
                     }
                     else if (itemName != "Basic-Sword") {
                         player->equipWeapon(item);

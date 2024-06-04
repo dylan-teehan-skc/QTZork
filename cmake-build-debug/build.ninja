@@ -153,6 +153,14 @@ build CMakeFiles/QTZork.dir/mainwindow.cpp.obj: CXX_COMPILER__QTZork_unscanned_D
   OBJECT_DIR = CMakeFiles\QTZork.dir
   OBJECT_FILE_DIR = CMakeFiles\QTZork.dir
 
+build CMakeFiles/QTZork.dir/hostile.cpp.obj: CXX_COMPILER__QTZork_unscanned_Debug C$:/Users/dylan/MyRepos/ZorkWithQT/hostile.cpp || cmake_object_order_depends_target_QTZork
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\QTZork.dir\hostile.cpp.obj.d
+  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/dylan/MyRepos/ZorkWithQT/cmake-build-debug/QTZork_autogen/include -isystem C:/QtDownloads/6.7.1/mingw_64/include/QtCore -isystem C:/QtDownloads/6.7.1/mingw_64/include -isystem C:/QtDownloads/6.7.1/mingw_64/mkspecs/win32-g++ -isystem C:/QtDownloads/6.7.1/mingw_64/include/QtWidgets -isystem C:/QtDownloads/6.7.1/mingw_64/include/QtGui
+  OBJECT_DIR = CMakeFiles\QTZork.dir
+  OBJECT_FILE_DIR = CMakeFiles\QTZork.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target QTZork
@@ -161,7 +169,7 @@ build CMakeFiles/QTZork.dir/mainwindow.cpp.obj: CXX_COMPILER__QTZork_unscanned_D
 #############################################
 # Link the executable QTZork.exe
 
-build QTZork.exe: CXX_EXECUTABLE_LINKER__QTZork_Debug CMakeFiles/QTZork.dir/QTZork_autogen/mocs_compilation.cpp.obj CMakeFiles/QTZork.dir/main.cpp.obj CMakeFiles/QTZork.dir/character.cpp.obj CMakeFiles/QTZork.dir/command.cpp.obj CMakeFiles/QTZork.dir/commandwords.cpp.obj CMakeFiles/QTZork.dir/item.cpp.obj CMakeFiles/QTZork.dir/parser.cpp.obj CMakeFiles/QTZork.dir/room.cpp.obj CMakeFiles/QTZork.dir/ZorkUL.cpp.obj CMakeFiles/QTZork.dir/processcommand.cpp.obj CMakeFiles/QTZork.dir/player.cpp.obj CMakeFiles/QTZork.dir/enemy.cpp.obj CMakeFiles/QTZork.dir/mainwindow.cpp.obj | C$:/QtDownloads/6.7.1/mingw_64/lib/libQt6Widgets.a C$:/QtDownloads/6.7.1/mingw_64/lib/libQt6Gui.a C$:/QtDownloads/6.7.1/mingw_64/lib/libQt6Core.a || QTZork_autogen QTZork_autogen_timestamp_deps
+build QTZork.exe: CXX_EXECUTABLE_LINKER__QTZork_Debug CMakeFiles/QTZork.dir/QTZork_autogen/mocs_compilation.cpp.obj CMakeFiles/QTZork.dir/main.cpp.obj CMakeFiles/QTZork.dir/character.cpp.obj CMakeFiles/QTZork.dir/command.cpp.obj CMakeFiles/QTZork.dir/commandwords.cpp.obj CMakeFiles/QTZork.dir/item.cpp.obj CMakeFiles/QTZork.dir/parser.cpp.obj CMakeFiles/QTZork.dir/room.cpp.obj CMakeFiles/QTZork.dir/ZorkUL.cpp.obj CMakeFiles/QTZork.dir/processcommand.cpp.obj CMakeFiles/QTZork.dir/player.cpp.obj CMakeFiles/QTZork.dir/enemy.cpp.obj CMakeFiles/QTZork.dir/mainwindow.cpp.obj CMakeFiles/QTZork.dir/hostile.cpp.obj | C$:/QtDownloads/6.7.1/mingw_64/lib/libQt6Widgets.a C$:/QtDownloads/6.7.1/mingw_64/lib/libQt6Gui.a C$:/QtDownloads/6.7.1/mingw_64/lib/libQt6Core.a || QTZork_autogen QTZork_autogen_timestamp_deps
   FLAGS = -g
   LINK_LIBRARIES = C:/QtDownloads/6.7.1/mingw_64/lib/libQt6Widgets.a  C:/QtDownloads/6.7.1/mingw_64/lib/libQt6Gui.a  C:/QtDownloads/6.7.1/mingw_64/lib/libQt6Core.a  -lmpr  -luserenv  -ld3d11  -ldxgi  -ldxguid  -ld3d12  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\QTZork.dir
@@ -262,7 +270,7 @@ build QTZork_autogen/timestamp QTZork_autogen/mocs_compilation.cpp | ${cmake_nin
 #############################################
 # Phony custom command for CMakeFiles\QTZork_autogen_timestamp_deps
 
-build CMakeFiles/QTZork_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/QTZork_autogen_timestamp_deps: phony C$:/QtDownloads/6.7.1/mingw_64/./bin/moc.exe C$:/QtDownloads/6.7.1/mingw_64/./bin/uic.exe C$:/QtDownloads/6.7.1/mingw_64/lib/libQt6Widgets.a C$:/QtDownloads/6.7.1/mingw_64/lib/libQt6Core.a
+build CMakeFiles/QTZork_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/QTZork_autogen_timestamp_deps: phony C$:/QtDownloads/6.7.1/mingw_64/./bin/uic.exe C$:/QtDownloads/6.7.1/mingw_64/./bin/moc.exe C$:/QtDownloads/6.7.1/mingw_64/lib/libQt6Widgets.a C$:/QtDownloads/6.7.1/mingw_64/lib/libQt6Core.a
 
 
 #############################################
