@@ -2,7 +2,9 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QVBoxLayout>
 #include "ZorkUL.h"
+#include <QLabel>
 
 namespace Ui {
     class MainWindow;
@@ -13,6 +15,7 @@ class MainWindow : public QMainWindow
 Q_OBJECT
 
 public:
+    QVBoxLayout *mainLayout;
     static MainWindow* getInstance(QWidget *parent = nullptr);
     ~MainWindow();
     void append(const QString &text);

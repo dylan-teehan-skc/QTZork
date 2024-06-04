@@ -18,7 +18,8 @@ public:
     // Getter and setter for health
     int getHealth() const;
     void setHealth(int health);
-    virtual void attack(Enemy& enemy);
+    virtual
+    void attack(Enemy& enemy);
 };
 
 #endif

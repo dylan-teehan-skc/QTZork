@@ -2,10 +2,10 @@
   "rooms": [
     {
       "name": "Salty Springs",
-      "description": "You now enter Salty Springs, a small, desolate town with overgrown vegetation and abandoned buildings. The air is thick with the scent of salt and decay.",
+      "description": "You now enter Salty Springs, a small, desolate town with overgrown vegetation and abandoned buildings. The air is thick with the scent of salt and decay. Once a thriving community, it now stands as a ghost town, echoing with memories of the past. Crumbling houses and rusting cars line the streets, overtaken by nature. Amidst the rubble, you spot a bandage lying next to a dilapidated fence and a key partially buried in the sand.",
       "items": [
-        { "name": "bandages", "hasDamage": false },
-        { "name": "key", "hasDamage": false }
+        { "name": "Bandages", "hasDamage": false },
+        { "name": "Key", "hasDamage": false }
       ],
       "exitN": ["Retail Row"],
       "exitE": [],
@@ -14,34 +14,34 @@
     },
     {
       "name": "Retail Row",
-      "description": "You enter Retail Row, a once-bustling shopping district now in ruins. Shattered glass litters the ground, and the remnants of storefronts line the street.",
+      "description": "You enter Retail Row, a once-bustling shopping district now in ruins. Shattered glass litters the ground, and the remnants of storefronts line the street. The husks of burned-out cars are scattered around, and tattered signs swing in the wind. The air smells of ash and abandonment, a stark reminder of what was lost. Among the debris, you find a Rifle with a damaged barrel and a Medkit still intact, lying inside a broken store window.",
       "items": [
-        { "name": "scar", "hasDamage": true, "damage": 30},
-        { "name": "medkit", "hasDamage": false }
+        { "name": "Rifle", "hasDamage": true, "damage": 30 },
+        { "name": "Medkit", "hasDamage": false }
       ],
-      "exitN": ["Salty Springs"],
+      "exitN": [],
       "exitE": ["Lonely Lodge"],
-      "exitS": ["Dusty Divot"],
+      "exitS": ["Salty Springs"],
       "exitW": []
     },
     {
       "name": "Dusty Divot",
-      "description": "Dusty Divot, a large crater in the ground filled with strange, glowing rocks and remnants of an alien spacecraft. The air hums with an otherworldly energy.",
+      "description": "Dusty Divot, a large crater in the ground filled with strange, glowing rocks and remnants of an alien spacecraft. The air hums with an otherworldly energy. The crater is dotted with alien flora that emits an eerie glow, and the ground is scattered with pieces of strange, metallic debris. Near a particularly large rock, you find a Map detailing the area and a Shield emitting a soft blue light.",
       "items": [
-        { "name": "map", "hasDamage": false},
-        { "name": "shield","hasDamage": false}
+        { "name": "Map", "hasDamage": false },
+        { "name": "Shield", "hasDamage": false }
       ],
-      "exitN": ["Retail Row"],
-      "exitE": ["Salty Springs"],
+      "exitN": ["Salty Springs"],
+      "exitE": [],
       "exitS": ["Haunted Hills"],
       "exitW": []
     },
     {
       "name": "Lonely Lodge",
-      "description": "Lonely Lodge, a secluded area surrounded by dense forest. The sound of wildlife is all around, but there is an eerie feeling of being watched.",
+      "description": "Lonely Lodge, a secluded area surrounded by dense forest. The sound of wildlife is all around, but there is an eerie feeling of being watched. The trees are thick, and the path is barely visible under the fallen leaves. Propped against a tree, you find a Bow with a broken string, and nearby, a stash of Food hidden under some bushes.",
       "items": [
-        { "name": "bow and arrow", "hasDamage": true, "damage": 30},
-        { "name": "food", "hasDamage": false }
+        { "name": "Bow", "hasDamage": true, "damage": 30 },
+        { "name": "Food", "hasDamage": false }
       ],
       "exitN": [],
       "exitE": [],
@@ -50,14 +50,74 @@
     },
     {
       "name": "Haunted Hills",
-      "description": "Haunted Hills, a graveyard shrouded in mist and filled with ancient tombstones. Whispers of the past seem to float through the air, sending chills down your spine.",
+      "description": "Haunted Hills, a graveyard shrouded in mist and filled with ancient tombstones. Whispers of the past seem to float through the air, sending chills down your spine. The gravestones are covered in moss, and the air is cold and damp. At the base of an old tombstone, you find a Lantern flickering with an eerie light and a Tome that seems to whisper when touched.",
       "items": [
-        { "name": "ghost lantern", "hasDamage": false},
-        { "name": "old map","hasDamage": false}
+        { "name": "Lantern", "hasDamage": false },
+        { "name": "Tome", "hasDamage": false }
       ],
       "exitN": ["Dusty Divot"],
       "exitE": [],
       "exitS": [],
+      "exitW": []
+    },
+    {
+      "name": "Pleasant Park",
+      "description": "Pleasant Park, an old neighborhood with neatly aligned houses, now eerily silent. The lawns are overgrown, and the playground is rusting away. As you wander, you find a Potion hidden under a bench and a Trap cleverly disguised among the fallen leaves.",
+      "items": [
+        { "name": "Potion", "hasDamage": false },
+        { "name": "Trap", "hasDamage": false }
+      ],
+      "exitN": ["Loot Lake"],
+      "exitE": ["Haunted Hills"],
+      "exitS": [],
+      "exitW": []
+    },
+    {
+      "name": "Loot Lake",
+      "description": "Loot Lake, a large body of water surrounded by a mix of trees and rocky cliffs. The surface of the lake is calm, reflecting the sky above. In the shallows, you spot a Sniper rifle abandoned on the shore, and a Boat drifting lazily, tethered to a nearby rock.",
+      "items": [
+        { "name": "Sniper", "hasDamage": false },
+        { "name": "Boat", "hasDamage": false }
+      ],
+      "exitN": [],
+      "exitE": [],
+      "exitS": ["Pleasant Park"],
+      "exitW": ["Tilted Towers"]
+    },
+    {
+      "name": "Tilted Towers",
+      "description": "Tilted Towers, a once-thriving urban center now reduced to a chaotic ruin. Skyscrapers with broken windows loom overhead, and the streets are filled with debris. Amid the wreckage, you find a Shotgun tucked behind a piece of rubble and a Grenade half-buried in the dirt.",
+      "items": [
+        { "name": "Shotgun", "hasDamage": false },
+        { "name": "Grenade", "hasDamage": false }
+      ],
+      "exitN": [],
+      "exitE": ["Loot Lake"],
+      "exitS": [],
+      "exitW": []
+    },
+    {
+      "name": "Tomato Town",
+      "description": "Tomato Town, a small, quirky area with a giant tomato statue in the center. The smell of pizza still lingers in the air. Near the statue, you find a Fork tucked into the ground and a mysterious Keyring hanging from the statue's hand.",
+      "items": [
+        { "name": "Fork", "hasDamage": false },
+        { "name": "Keyring", "hasDamage": false }
+      ],
+      "exitN": ["Wailing Woods"],
+      "exitE": ["Lonely Lodge"],
+      "exitS": [],
+      "exitW": []
+    },
+    {
+      "name": "Wailing Woods",
+      "description": "Wailing Woods, a dense forest with a labyrinth of trees. The canopy is thick, blocking out most of the light, and the air is filled with the sound of rustling leaves. At the center of the woods, you find a Compass on a tree stump and a Firepit that seems recently used.",
+      "items": [
+        { "name": "Compass", "hasDamage": false },
+        { "name": "Firepit", "hasDamage": false }
+      ],
+      "exitN": [],
+      "exitE": [],
+      "exitS": ["Tomato Town"],
       "exitW": []
     }
   ]

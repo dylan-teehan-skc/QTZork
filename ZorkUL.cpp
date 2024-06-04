@@ -3,10 +3,6 @@
 #include "ZorkUL.h"
 #include "json.hpp"
 #include "Player.h"
-#include "Enemy.h"
-#include "Player.h"
-#include "processCommand.h"
-#include "mainwindow.h"
 
 using json = nlohmann::json;
 using namespace std;
@@ -35,7 +31,7 @@ using namespace std;
 
 void ZorkUL::createRooms() {
 
-    ifstream ifs("C:/Users/dylan/MyRepos/ZorkNoQt/rooms.json");
+    ifstream ifs("C:/Users/dylan/MyRepos/ZorkWithQt/rooms.json");
     if (!ifs.is_open()) {
         cerr << "Error opening file rooms.json" << endl;
         return;
@@ -55,13 +51,14 @@ void ZorkUL::createRooms() {
 
         for (const auto& itemData : roomData["items"]) {
             string itemName = itemData["name"];
-            room->addItem(new Item(itemName));
             bool hasDamage = itemData["hasDamage"];
             if (hasDamage){
                 int damage = itemData["damage"];
                 room->addItem(new Item(itemName, hasDamage, damage));
             }
-
+            else{
+                room->addItem(new Item(itemName));
+            }
         }
     }
 
@@ -119,7 +116,7 @@ Room* ZorkUL::getCurrentRoom() {
     return currentRoom;
 }
 
-ZorkUL::ZorkUL(ZorkUL *pUl) : processor(this){
+ZorkUL::ZorkUL() : processor(this){
     createRooms();
 }
 
@@ -152,6 +149,26 @@ void ZorkUL::printWelcome() {
     cout << currentRoom->longDescription() << endl;
 
 }
+
+void ZorkUL::printHelp() {
+    cout << "valid inputs are; " << endl;
+    parser.showCommands();
+}
+
+void ZorkUL::initiateBattle() {
+    // Generate a random enemy
+    string enemyName = "Goblin"; // You can use a random name generator
+    int enemyHealth = 100; // Randomize health
+    int enemyAttack = 50; // Randomize attack
+
+    Enemy enemy(enemyName, enemyHealth, enemyAttack);
+
+    // Start the battle
+    battle(enemy);
+}
+
+
+
 
 
 

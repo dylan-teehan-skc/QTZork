@@ -2,7 +2,7 @@
 #include "Enemy.h"
 #include "Player.h"
 #include <iostream>
-#include <algorithm> // for std::min and std::max
+#include <algorithm>
 
 using namespace std;
 
@@ -18,7 +18,8 @@ Player* Player::getInstance(string description, int health) {
 }
 
 // Constructor definition
-Player::Player(string description, int health) : Character(description, health), health(health) {}
+Player::Player(string description, int health)
+: Character(description, health), health(health) {}
 
 // Getter for health
 int Player::getHealth() const {

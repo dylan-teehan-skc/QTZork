@@ -1,6 +1,5 @@
 #include "Character.h"
 
-// Constructor definition
 Character::Character(string description, int health) {
     this->description = description;
     this->health = health;
@@ -18,10 +17,11 @@ string Character::Inventory() const {
     string ret = description;
     ret += "\n Item list:\n";
     for (const Item &item: itemsInCharacter) {
-        if (item.getDamage() == 0){
-            ret += "\t" + item.getName();}
-        else{
-            ret += "\t" + item.getName() + ": " + to_string(item.getDamage()) + " damage";}
+        if (item.getDamage() == 0) {
+            ret += "\t" + item.getName();
+        } else {
+            ret += "\t" + item.getName() + ": " + to_string(item.getDamage()) + " damage";
+        }
     }
     return ret;
 }
@@ -53,19 +53,19 @@ void Character::setItemsInCharacter(const vector<Item> &itemsInCharacter) {
 bool Character::hasItem(const string &itemName) const {
     for (const Item &item: itemsInCharacter) {
         if (item.getName() == itemName) {
-            return true;  // Item found
+            return true;
         }
     }
-    return false;  // Item not found
+    return false;
 }
 
-void Character::equipWeapon(const Item& weapon) {
+void Character::equipWeapon(const Item &weapon) {
     equippedWeapon = new Item(weapon);
 }
 
 
-void Character::attack(Character& target) {
-    cout << "Charachter attacks" << endl;
+void Character::attack(Character &target) {
+    cout << "Character attacks" << endl;
 }
 
 Item Character::getEquippedWeapon() const {

@@ -30,6 +30,8 @@ public:
     QPushButton *goEastButton;
     QPushButton *goSouthButton;
     QPlainTextEdit *QTextEdit;
+    QPushButton *pushButton;
+    QPushButton *pushButton_2;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
@@ -41,22 +43,28 @@ public:
         centralwidget->setObjectName("centralwidget");
         lineEdit = new QLineEdit(centralwidget);
         lineEdit->setObjectName("lineEdit");
-        lineEdit->setGeometry(QRect(470, 410, 281, 28));
+        lineEdit->setGeometry(QRect(430, 360, 291, 28));
         goNorthButton = new QPushButton(centralwidget);
         goNorthButton->setObjectName("goNorthButton");
-        goNorthButton->setGeometry(QRect(530, 120, 161, 61));
+        goNorthButton->setGeometry(QRect(110, 360, 161, 61));
         goWestButton = new QPushButton(centralwidget);
         goWestButton->setObjectName("goWestButton");
-        goWestButton->setGeometry(QRect(450, 200, 141, 61));
+        goWestButton->setGeometry(QRect(40, 430, 141, 61));
         goEastButton = new QPushButton(centralwidget);
         goEastButton->setObjectName("goEastButton");
-        goEastButton->setGeometry(QRect(610, 200, 151, 61));
+        goEastButton->setGeometry(QRect(190, 430, 151, 61));
         goSouthButton = new QPushButton(centralwidget);
         goSouthButton->setObjectName("goSouthButton");
-        goSouthButton->setGeometry(QRect(530, 280, 151, 61));
+        goSouthButton->setGeometry(QRect(110, 500, 151, 61));
         QTextEdit = new QPlainTextEdit(centralwidget);
         QTextEdit->setObjectName("QTextEdit");
-        QTextEdit->setGeometry(QRect(20, 20, 391, 511));
+        QTextEdit->setGeometry(QRect(20, 20, 751, 301));
+        pushButton = new QPushButton(centralwidget);
+        pushButton->setObjectName("pushButton");
+        pushButton->setGeometry(QRect(430, 430, 141, 61));
+        pushButton_2 = new QPushButton(centralwidget);
+        pushButton_2->setObjectName("pushButton_2");
+        pushButton_2->setGeometry(QRect(590, 430, 141, 61));
         MainWindow->setCentralWidget(centralwidget);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName("statusbar");
@@ -75,6 +83,8 @@ public:
         goWestButton->setText(QCoreApplication::translate("MainWindow", "WEST", nullptr));
         goEastButton->setText(QCoreApplication::translate("MainWindow", "EAST", nullptr));
         goSouthButton->setText(QCoreApplication::translate("MainWindow", "SOUTH", nullptr));
+        pushButton->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
+        pushButton_2->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
     } // retranslateUi
 
 };

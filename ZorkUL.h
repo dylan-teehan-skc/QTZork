@@ -6,6 +6,7 @@
 #include "Room.h"
 #include "Item.h"
 #include "processCommand.h"
+#include "enemy.h"
 #include <iostream>
 #include <string>
 #include <QSize>
@@ -18,19 +19,23 @@ private:
     void createRooms();
     Parser parser;
     void printWelcome();
-    void createItems();
-    void displayItems();
     Room *currentRoom;
     ProcessCommand processor = ProcessCommand(nullptr);
 
 public:
-    ZorkUL(ZorkUL *pUl);
+    ZorkUL();
     void play();
     Room* getCurrentRoom();
     void printHelp();
-    void goRoom(Command command);
-    string go(string direction);
     bool update(string buffer);
+
+    void goRoom(Command command);
+
+    void checkForBattle();
+
+    void battle(Enemy &enemy);
+
+    void goRoom(Command command, ZorkUL *gamePtr);
 };
 
 #endif /*ZORKUL_H_*/

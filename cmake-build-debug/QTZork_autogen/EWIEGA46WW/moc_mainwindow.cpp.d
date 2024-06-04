@@ -264,6 +264,7 @@ C:/Users/dylan/MyRepos/ZorkWithQT/cmake-build-debug/QTZork_autogen/EWIEGA46WW/mo
   C:/QtDownloads/6.7.1/mingw_64/include/QtCore/qglobalstatic.h \
   C:/QtDownloads/6.7.1/mingw_64/include/QtCore/qhash.h \
   C:/QtDownloads/6.7.1/mingw_64/include/QtCore/qhashfunctions.h \
+  C:/QtDownloads/6.7.1/mingw_64/include/QtCore/qiodevice.h \
   C:/QtDownloads/6.7.1/mingw_64/include/QtCore/qiodevicebase.h \
   C:/QtDownloads/6.7.1/mingw_64/include/QtCore/qiterable.h \
   C:/QtDownloads/6.7.1/mingw_64/include/QtCore/qiterator.h \
@@ -331,6 +332,7 @@ C:/Users/dylan/MyRepos/ZorkWithQT/cmake-build-debug/QTZork_autogen/EWIEGA46WW/mo
   C:/QtDownloads/6.7.1/mingw_64/include/QtCore/qtversionchecks.h \
   C:/QtDownloads/6.7.1/mingw_64/include/QtCore/qtypeinfo.h \
   C:/QtDownloads/6.7.1/mingw_64/include/QtCore/qtypes.h \
+  C:/QtDownloads/6.7.1/mingw_64/include/QtCore/qurl.h \
   C:/QtDownloads/6.7.1/mingw_64/include/QtCore/qutf8stringview.h \
   C:/QtDownloads/6.7.1/mingw_64/include/QtCore/qvariant.h \
   C:/QtDownloads/6.7.1/mingw_64/include/QtCore/qvarlengtharray.h \
@@ -350,19 +352,29 @@ C:/Users/dylan/MyRepos/ZorkWithQT/cmake-build-debug/QTZork_autogen/EWIEGA46WW/mo
   C:/QtDownloads/6.7.1/mingw_64/include/QtGui/qkeysequence.h \
   C:/QtDownloads/6.7.1/mingw_64/include/QtGui/qpaintdevice.h \
   C:/QtDownloads/6.7.1/mingw_64/include/QtGui/qpalette.h \
+  C:/QtDownloads/6.7.1/mingw_64/include/QtGui/qpicture.h \
   C:/QtDownloads/6.7.1/mingw_64/include/QtGui/qpixelformat.h \
   C:/QtDownloads/6.7.1/mingw_64/include/QtGui/qpixmap.h \
   C:/QtDownloads/6.7.1/mingw_64/include/QtGui/qpolygon.h \
   C:/QtDownloads/6.7.1/mingw_64/include/QtGui/qregion.h \
   C:/QtDownloads/6.7.1/mingw_64/include/QtGui/qrgb.h \
   C:/QtDownloads/6.7.1/mingw_64/include/QtGui/qrgba64.h \
+  C:/QtDownloads/6.7.1/mingw_64/include/QtGui/qtextdocument.h \
   C:/QtDownloads/6.7.1/mingw_64/include/QtGui/qtgui-config.h \
   C:/QtDownloads/6.7.1/mingw_64/include/QtGui/qtguiexports.h \
   C:/QtDownloads/6.7.1/mingw_64/include/QtGui/qtguiglobal.h \
   C:/QtDownloads/6.7.1/mingw_64/include/QtGui/qtransform.h \
   C:/QtDownloads/6.7.1/mingw_64/include/QtGui/qwindowdefs.h \
   C:/QtDownloads/6.7.1/mingw_64/include/QtGui/qwindowdefs_win.h \
+  C:/QtDownloads/6.7.1/mingw_64/include/QtWidgets/QLabel \
   C:/QtDownloads/6.7.1/mingw_64/include/QtWidgets/QMainWindow \
+  C:/QtDownloads/6.7.1/mingw_64/include/QtWidgets/QVBoxLayout \
+  C:/QtDownloads/6.7.1/mingw_64/include/QtWidgets/qboxlayout.h \
+  C:/QtDownloads/6.7.1/mingw_64/include/QtWidgets/qframe.h \
+  C:/QtDownloads/6.7.1/mingw_64/include/QtWidgets/qgridlayout.h \
+  C:/QtDownloads/6.7.1/mingw_64/include/QtWidgets/qlabel.h \
+  C:/QtDownloads/6.7.1/mingw_64/include/QtWidgets/qlayout.h \
+  C:/QtDownloads/6.7.1/mingw_64/include/QtWidgets/qlayoutitem.h \
   C:/QtDownloads/6.7.1/mingw_64/include/QtWidgets/qmainwindow.h \
   C:/QtDownloads/6.7.1/mingw_64/include/QtWidgets/qsizepolicy.h \
   C:/QtDownloads/6.7.1/mingw_64/include/QtWidgets/qtabwidget.h \
@@ -370,10 +382,13 @@ C:/Users/dylan/MyRepos/ZorkWithQT/cmake-build-debug/QTZork_autogen/EWIEGA46WW/mo
   C:/QtDownloads/6.7.1/mingw_64/include/QtWidgets/qtwidgetsexports.h \
   C:/QtDownloads/6.7.1/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
   C:/QtDownloads/6.7.1/mingw_64/include/QtWidgets/qwidget.h \
+  C:/Users/dylan/MyRepos/ZorkWithQT/Character.h \
   C:/Users/dylan/MyRepos/ZorkWithQT/Command.h \
   C:/Users/dylan/MyRepos/ZorkWithQT/CommandWords.h \
   C:/Users/dylan/MyRepos/ZorkWithQT/Item.h \
   C:/Users/dylan/MyRepos/ZorkWithQT/Parser.h \
+  C:/Users/dylan/MyRepos/ZorkWithQT/Player.h \
   C:/Users/dylan/MyRepos/ZorkWithQT/Room.h \
   C:/Users/dylan/MyRepos/ZorkWithQT/ZorkUL.h \
+  C:/Users/dylan/MyRepos/ZorkWithQT/enemy.h \
   C:/Users/dylan/MyRepos/ZorkWithQT/processCommand.h

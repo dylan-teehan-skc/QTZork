@@ -2,7 +2,7 @@
 #include <iostream>
 using namespace std;
 
-Item::Item(std::string name, bool hasDamage, int damage)
+Item::Item(string name, bool hasDamage, int damage)
     : name(name), hasDamage(hasDamage), damage(damage) {}
 
 void Item::setDamage(int inDamage) {
@@ -22,6 +22,6 @@ string Item::getName() const {
 }
 
 ostream& operator<<(ostream& os, const Item& item) {
-    os << "Item: " << item.getName() << ", Damage: " << (item.hasDamage ? std::to_string(item.damage) : "N/A");
+    os << "Item: " << item.getName() << ", Damage: " << (item.hasDamage ? to_string(item.damage) : "N/A");
     return os;
 }

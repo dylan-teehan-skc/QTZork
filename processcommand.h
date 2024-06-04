@@ -4,6 +4,7 @@
 #define PROCESSCOMMAND_H
 
 #include "ZorkUL.h"
+#include "enemy.h"
 
 class ZorkUL;
 
@@ -14,7 +15,7 @@ private:
 public:
     ProcessCommand(ZorkUL* gamePtr);
     bool processCommand(Command command);
-    string go(string direction);
+
 };
 
 #endif // PROCESSCOMMAND_H

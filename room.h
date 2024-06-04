@@ -22,13 +22,12 @@ public:
     int numberOfItems();
     Room(string name, string description);
     void setExits(Room *north, Room *east, Room *south, Room *west);
-    string shortDescription();
     string longDescription();
     Room* nextRoom(string direction);
     void addItem(Item *inItem);
     string displayItem();
     int isItemInRoom(string inString);
-    void removeItemFromRoom(int location);
+    void removeItemFromRoom(Item *item);
     const Item *const getItem(int index) const;
 };
 

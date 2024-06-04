@@ -2,6 +2,7 @@
 #define COMMAND_H_
 
 #include <string>
+
 using namespace std;
 
 class Command {
@@ -11,9 +12,13 @@ private:
 
 public:
     Command(string firstWord, string secondWord);
+
     string getCommandWord();
+
     string getSecondWord();
+
     bool isUnknown();
+
     bool hasSecondWord();
 };
 
