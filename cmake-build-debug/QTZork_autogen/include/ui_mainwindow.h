@@ -30,8 +30,9 @@ public:
     QPushButton *goEastButton;
     QPushButton *goSouthButton;
     QPlainTextEdit *QTextEdit;
-    QPushButton *pushButton;
-    QPushButton *pushButton_2;
+    QPushButton *attackButton;
+    QPushButton *blockButton;
+    QPushButton *battleButton;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
@@ -59,12 +60,15 @@ public:
         QTextEdit = new QPlainTextEdit(centralwidget);
         QTextEdit->setObjectName("QTextEdit");
         QTextEdit->setGeometry(QRect(20, 20, 751, 301));
-        pushButton = new QPushButton(centralwidget);
-        pushButton->setObjectName("pushButton");
-        pushButton->setGeometry(QRect(430, 430, 141, 61));
-        pushButton_2 = new QPushButton(centralwidget);
-        pushButton_2->setObjectName("pushButton_2");
-        pushButton_2->setGeometry(QRect(590, 430, 141, 61));
+        attackButton = new QPushButton(centralwidget);
+        attackButton->setObjectName("attackButton");
+        attackButton->setGeometry(QRect(430, 500, 141, 61));
+        blockButton = new QPushButton(centralwidget);
+        blockButton->setObjectName("blockButton");
+        blockButton->setGeometry(QRect(590, 500, 141, 61));
+        battleButton = new QPushButton(centralwidget);
+        battleButton->setObjectName("battleButton");
+        battleButton->setGeometry(QRect(500, 420, 151, 61));
         MainWindow->setCentralWidget(centralwidget);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName("statusbar");
@@ -83,8 +87,9 @@ public:
         goWestButton->setText(QCoreApplication::translate("MainWindow", "WEST", nullptr));
         goEastButton->setText(QCoreApplication::translate("MainWindow", "EAST", nullptr));
         goSouthButton->setText(QCoreApplication::translate("MainWindow", "SOUTH", nullptr));
-        pushButton->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
-        pushButton_2->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
+        attackButton->setText(QCoreApplication::translate("MainWindow", "ATTACK", nullptr));
+        blockButton->setText(QCoreApplication::translate("MainWindow", "BLOCK", nullptr));
+        battleButton->setText(QCoreApplication::translate("MainWindow", "BATTLE", nullptr));
     } // retranslateUi
 
 };

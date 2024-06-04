@@ -4,6 +4,7 @@
       "name": "Salty Springs",
       "description": "You now enter Salty Springs, a small, desolate town with overgrown vegetation and abandoned buildings. The air is thick with the scent of salt and decay. Once a thriving community, it now stands as a ghost town, echoing with memories of the past. Crumbling houses and rusting cars line the streets, overtaken by nature. Amidst the rubble, you spot a bandage lying next to a dilapidated fence and a key partially buried in the sand.",
       "items": [
+        { "name": "Sword", "hasDamage": true, "damage": 10 },
         { "name": "Bandages", "hasDamage": false },
         { "name": "Key", "hasDamage": false }
       ],

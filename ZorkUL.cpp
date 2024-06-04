@@ -3,6 +3,7 @@
 #include "ZorkUL.h"
 #include "json.hpp"
 #include "Player.h"
+#include "mainwindow.h"
 
 using json = nlohmann::json;
 using namespace std;
@@ -156,15 +157,56 @@ void ZorkUL::printHelp() {
 }
 
 void ZorkUL::initiateBattle() {
-    // Generate a random enemy
-    string enemyName = "Goblin"; // You can use a random name generator
-    int enemyHealth = 100; // Randomize health
-    int enemyAttack = 50; // Randomize attack
+    Player *player = Player::getInstance();
+    string enemyName = "Goblin"; 
+    int enemyHealth = 100; 
+    int enemyAttack = 5;
 
-    Enemy enemy(enemyName, enemyHealth, enemyAttack);
+    enemy = new Enemy(enemyName, enemyHealth, enemyAttack); 
+    
+    QString enemyString = QString::fromStdString("A wild " + enemy->getDescription() + " appears!");
+    MainWindow::getInstance()->append(enemyString);
+}
 
-    // Start the battle
-    battle(enemy);
+
+void ZorkUL::processBattleCommand(Command command) {
+    Player *player = Player::getInstance();
+    string commandWord = command.getCommandWord();
+
+    if (commandWord.compare("attack") == 0) {
+        player->attack(*enemy);
+        if (enemy->getHealth() <= 0) {
+            QString enemyDefeatString = QString::fromStdString("You defeated the " + enemy->getDescription() + "!");
+            MainWindow::getInstance()->append(enemyDefeatString);
+            game->getCurrentRoom()->addItem(new Item("Shotgun", "True", 30));
+            delete enemy; // Clean up the enemy object
+            enemy = nullptr;
+            return;
+        }
+    } else if (commandWord.compare("block") == 0) {
+        // Block logic: player takes no damage this turn
+        QString blockString = "You block the enemy's attack!";
+        MainWindow::getInstance()->append(blockString);
+    } else {
+        MainWindow::getInstance()->append("Invalid command during battle!");
+        cout << "Invalid command during battle!" << endl;
+        return;
+    }
+
+    // Enemy attacks unless player blocked
+    if (commandWord.compare("block") != 0) {
+        enemy->attack(*player);
+    }
+
+    // Check if player is defeated
+    if (player->getHealth() <= 0) {
+        QString playerDefeatString = QString::fromStdString("You were defeated by the " + enemy->getDescription() + "...");
+        QString gameOverString = QString::fromStdString("Game is now over");
+        MainWindow::getInstance()->append(playerDefeatString);
+        MainWindow::getInstance()->append(gameOverString);
+        delete enemy;
+        enemy = nullptr;
+    }
 }
 
 

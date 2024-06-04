@@ -78,25 +78,37 @@ void MainWindow::on_lineEdit_returnPressed()
 
 void MainWindow::on_goNorthButton_clicked()
 {
-    handleDirectionCommand("go north");
+    handleCommand("go north");
 }
 
 void MainWindow::on_goEastButton_clicked()
 {
-    handleDirectionCommand("go east");
+    handleCommand("go east");
 }
 
 void MainWindow::on_goWestButton_clicked()
 {
-    handleDirectionCommand("go west");
+    handleCommand("go west");
 }
 
 void MainWindow::on_goSouthButton_clicked()
 {
-    handleDirectionCommand("go south");
+    handleCommand("go south");
+}
+void MainWindow::on_battleButton_clicked()
+{
+    handleCommand("battle");
+}
+void MainWindow::on_attackButton_clicked()
+{
+    handleCommand("attack");
+}
+void MainWindow::on_blockButton_clicked()
+{
+    handleCommand("block");
 }
 
-void MainWindow::handleDirectionCommand(const QString &command)
+void MainWindow::handleCommand(const QString &command)
 {
     static bool processing = false;
     if (processing) {
@@ -112,35 +124,4 @@ void MainWindow::handleDirectionCommand(const QString &command)
 
     processing = false;
 }
-
-//void MainWindow::refreshInventory() {
-//    // Clear the current inventory display
-//    QLayout *inventoryLayout = inventoryWidget->layout();
-//    QLayoutItem *item;
-//    while ((item = inventoryLayout->takeAt(0)) != nullptr) {
-//        delete item->widget();
-//        delete item;
-//    }
-//
-//    Player* player = Player::getInstance();
-//    const vector<Item>& items = player->getItemsInCharacter();
-//
-//    for (const Item& item : items) {
-//        QString itemName = QString::fromStdString(item.getName());
-//        QPushButton *equipButton = new QPushButton("Equip");
-//        connect(equipButton, &QPushButton::clicked, this, [=]() {
-//            player->equipWeapon(item);
-//            append("Equipped " + itemName);
-//        });
-//
-//        QHBoxLayout *itemLayout = new QHBoxLayout;
-//        itemLayout->addWidget(new QLabel(itemName));
-//        itemLayout->addWidget(equipButton);
-//
-//        inventoryLayout->addItem(itemLayout);
-//    }
-//
-//    // Add a stretchable space at the end of the inventory layout
-//    inventoryLayout->addItem(new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding));
-//}
 

@@ -34,8 +34,10 @@ private slots:
     void on_goEastButton_clicked();
     void on_goWestButton_clicked();
     void on_goSouthButton_clicked();
-    void handleDirectionCommand(const QString &command);
-
+    void on_blockButton_clicked();
+    void on_attackButton_clicked();
+    void on_battleButton_clicked();
+    void handleCommand(const QString &command);
 };
 
 #endif // MAINWINDOW_H

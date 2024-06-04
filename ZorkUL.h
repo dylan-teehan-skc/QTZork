@@ -21,6 +21,7 @@ private:
     void printWelcome();
     Room *currentRoom;
     ProcessCommand processor = ProcessCommand(nullptr);
+    Enemy* enemy;
 
 public:
     ZorkUL();
@@ -36,6 +37,10 @@ public:
     void battle(Enemy &enemy);
 
     void goRoom(Command command, ZorkUL *gamePtr);
+
+    void initiateBattle();
+
+    void processBattleCommand(Command command);
 };
 
 #endif /*ZORKUL_H_*/

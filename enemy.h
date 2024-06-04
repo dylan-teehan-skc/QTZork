@@ -11,7 +11,7 @@ private:
 public:
     Enemy(string description, int health, int damage);
     virtual
-    void attack(Player player);
+    void attack(Player &player);
 };
 
 #endif // ENEMY_H

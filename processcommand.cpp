@@ -1,3 +1,4 @@
+#include <sstream>
 #include "ZorkUL.h"
 #include "processCommand.h"
 #include "Player.h"
@@ -60,11 +61,13 @@ bool ProcessCommand::processCommand(Command command) {
             for (const Item &item: playerItems) {
                 if (item.getName() == itemName) {
                     // Equip the item
-                    player->equipWeapon(item);
-                    QString equippedString = QString::fromStdString("You have equipped " + itemName);
-                    MainWindow::getInstance()->append(equippedString);
-                    cout << "You have equipped " << itemName << endl;
-                    break; // Exit the loop once the item is equipped
+                    if (itemName != "Basic-Sword") {
+                        player->equipWeapon(item);
+                        QString equippedString = QString::fromStdString("You have equipped " + itemName);
+                        MainWindow::getInstance()->append(equippedString);
+                        cout << "You have equipped " << itemName << endl;
+                        break; // Exit the loop once the item is equipped
+                    }
                 }
             }
         } else {
@@ -74,8 +77,10 @@ bool ProcessCommand::processCommand(Command command) {
     } else if (commandWord.compare("equipped?") == 0) {
         cout << player->getEquippedWeapon();
     } else if (commandWord.compare("health") == 0) {
-        QString healthString = QString::fromStdString("Your health is " + player->getHealth());
-        MainWindow::getInstance()->append(healthString);
+        cout << player->getHealth() << endl;
+        std::stringstream healthString;
+        healthString << "Your health is" << player->getHealth();
+        MainWindow::getInstance()->append(QString::fromStdString(healthString.str()));
         cout << "Your health is " << player->getHealth() << endl;
     } else if (commandWord.compare("use") == 0) {
         string itemName = command.getSecondWord();
@@ -117,9 +122,12 @@ bool ProcessCommand::processCommand(Command command) {
             cout << "overdefined input" << endl;
         } else
             return true;
+    } else if (commandWord.compare("battle") == 0) {
+        game->initiateBattle();
+    } else if (commandWord.compare("attack") == 0 || commandWord.compare("block") == 0) {
+        game->processBattleCommand(command);
     }
     return false;
-
 }
 
 void ZorkUL::goRoom(Command command) {
@@ -146,48 +154,3 @@ void ZorkUL::goRoom(Command command) {
     }
 }
 
-
-void ZorkUL::checkForBattle() {
-    // 20% chance of a battle
-    if (rand() % 100 < 99) {
-        // Generate a random enemy
-        string enemyName = "Goblin"; // You can use a random name generator
-        int enemyHealth = 100; // Randomize health
-        int enemyAttack = 50; // Randomize attack
-
-        Enemy enemy(enemyName, enemyHealth, enemyAttack);
-
-        // Start the battle
-        battle(enemy);
-    }
-}
-
-void ZorkUL::battle(Enemy& enemy) {
-
-    // Inform the user that a battle has started
-    QString enemyString = QString::fromStdString("A wild " + enemy.getDescription() + " appears!");
-    MainWindow::getInstance()->append(enemyString);
-
-    // Perform battle logic
-    while (player->getHealth() > 0 && enemy.getHealth() > 0) {
-        // Player attacks first
-        player->attack(enemy);
-
-        // Check if enemy is defeated
-        if (enemy.getHealth() <= 0) {
-            QString enemyDefeatString = QString::fromStdString("You defeated the " + enemy.getDescription() + "!");
-            MainWindow::getInstance()->append(enemyDefeatString);
-            break;
-        }
-
-        // Enemy attacks
-        enemy.attack(*player);
-
-        // Check if player is defeated
-        if (player->getHealth() <= 0) {
-            QString playerDefeatString = QString::fromStdString("You were defeated by the " + enemy.getDescription() + "...");
-            MainWindow::getInstance()->append(playerDefeatString);
-            break;
-        }
-    }
-}

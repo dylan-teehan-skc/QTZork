@@ -1,8 +1,11 @@
 #include "Character.h"
 #include "Enemy.h"
 #include "Player.h"
+#include "mainwindow.h"
 #include <iostream>
 #include <algorithm>
+#include <qstring.h>
+#include <sstream>
 
 using namespace std;
 
@@ -36,8 +39,10 @@ void Player::attack(Enemy& enemy) {
     Player *player = Player::getInstance();
     Item equippedWeapon = player->getEquippedWeapon();
     if (equippedWeapon.getDamage() > 0) {
-        cout << "Character attacks " << enemy.getDescription() << " with " << equippedWeapon.getName() << " causing "
-             << equippedWeapon.getDamage() << " damage." << endl;
+        std::stringstream playerAttackString;
+        playerAttackString << "Player attacks " << enemy.getDescription() << " with " << equippedWeapon.getName() << " causing "
+                           << equippedWeapon.getDamage() << " damage.";
+        MainWindow::getInstance()->append(QString::fromStdString(playerAttackString.str()));
         enemy.setHealth(enemy.getHealth() - equippedWeapon.getDamage());
     } else {
         cout << "You can't attack with this weapon, please equip another." << endl;

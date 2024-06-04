@@ -20,6 +20,9 @@ CommandWords::CommandWords() {
         validCommands.push_back("health");
         validCommands.push_back("equip");
         validCommands.push_back("equipped?");
+        validCommands.push_back("battle");
+        validCommands.push_back("attack");
+        validCommands.push_back("block");
     }
 }
 
